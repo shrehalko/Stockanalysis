@@ -134,8 +134,8 @@ Since the majority of the stocks have a negative yearly return, this might also 
 #### **Execution time of Original Codes:**
 The execution times of the original code for the years 2017 and 2018 is as below: 
 <p align = "center">
-!<img src = "Module2_VBA\Images\2017_runtime.png1" width = 50%>
-!<img src = "Module2_VBA\Images\2018_runtime.png1" width = 50%>
+!<img src = "Module2_VBA\Images\2017_runtime.png" width = 50%>
+!<img src = "Module2_VBA\Images\2018_runtime.png" width = 50%>
 </p>
 
 ## <a name="results"></a>Results
