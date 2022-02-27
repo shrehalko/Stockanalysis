@@ -116,8 +116,8 @@ The table below displays the analysis of a dozen green stocks for the years 2017
 2. Total Daily Volume
 3. Return
 <p align = "center">
-<img src = "Resources\2017_data.png" width = 25%>
-<img src = "Resources\2018_data.png" width = 25%>
+<img src = "Module2_VBA\Images\2017_data.png" width = 25%>
+<img src = "Module2_VBA\Images\2018_data.png" width = 25%>
 </p>        
      
 #### **Total Volume and Yearly Return:**
@@ -127,15 +127,15 @@ Comparing the total volume of the dozen stocks in both the years, we see that al
 Since the majority of the stocks have a negative yearly return, this might also be because the stock market may have gone down during the year 2018. Even though by looking at the data in the year 2018, DQ doesnt seem to be a good stock to invest in, there might be other reasons for its decline. Hence we need to analyze more data of the previous years for this stock to see its yearly trends.
 
 <p align = "center">
-<img src = "Resources\2017_volbar.png" width = 25%>
-<img src = "Resources\2018_volbar.png" width = 25%>
+<img src = "Module2_VBA\Images\2017_volbar.png" width = 25%>
+<img src = "Module2_VBA\Images\2018_volbar.png" width = 25%>
 </p>
 
 #### **Execution time of Original Codes:**
 The execution times of the original code for the years 2017 and 2018 is as below: 
 <p align = "center">
-!<img src = "Resources\2017_runtime.png1" width = 50%>
-!<img src = "Resources\2018_runtime.png1" width = 50%>
+!<img src = "Module2_VBA\Images\2017_runtime.png1" width = 50%>
+!<img src = "Module2_VBA\Images\2018_runtime.png1" width = 50%>
 </p>
 
 ## <a name="results"></a>Results
