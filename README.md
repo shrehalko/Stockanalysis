@@ -173,5 +173,5 @@ The major **disadvantage of refactoring** is:
 3. The **major challenge** faced by me in refactoring the code was that it was **time consuming**. Being new to VBA I had to spend more time understanding the syntaxes and various functionalities and how to implement them in my code.
 
 ## <a name="references"></a>References
-[1] [Original Code](green_stocks.xlsm) <br>
-[2] [Refactored Code](VBA_Challenge.xlsm)
+[1] [Original Code](Module2_VBA/green_stocks.xlsm) <br>
+[2] [Refactored Code](Module2_VBA/VBA_Challenge.xlsm)
