@@ -174,4 +174,4 @@ The major **disadvantage of refactoring** is:
 
 ## <a name="references"></a>References
 [1] [Original Code](Module2_VBA/green_stocks.xlsm) <br> 
-[2] [Refactored Code](Module2_VBA\Challenge\VBA_Challenge.xlsm.xlsm)
+[2] [Refactored Code](Module2_VBA\Challenge\VBA_Challenge.xlsm)
