@@ -5,9 +5,15 @@ Analysis of Green energy stocks
 - [Overview of Project](#OverviewProject)
   * [Background](#Background)
   * [Purpose](#purpose)
-- [Initial Analysis](#Analysis)
+- [Pseudo Code](#pseudocode)
+  * [Original Code](#Original)
+  * [Refactored Code](#refactored)
 - [Results](#results)
+  * [Total Volume and Yearly Return](#TVYR)
+  * [Execution Time](#time)
 - [Summary](#summary)
+  * [Advantages or Disadvantages of Refactoring code](#advantages)
+  * [How do these Pros and Cons apply to refactoring the original VBA script?](#pros)
 - [References](#references)
 
 
@@ -19,8 +25,8 @@ Steve, needs to analyze the performance of green energy stocks (from the year 20
 Now that Steve is able to analyze a few stocks successfully, he wants to expand the dataset to include the entire stock market over the last few years. Although our code works well for a dozen stocks, it might not work very efficiently for thousands of stocks. That is, it might take a long time to execute to display the required analysis.
 Since the data is huge, we would want our macro to run efficiently. For this purpose we will <b><i>refactor</b></i> our existing code to improve clarity and the run time performance. This project highlights the importance of <b><i>refactoring</i></b> by comparing the run time for our previous code and the new refactored code. Please refer to the [References](#references) section to view both the codes.  
 
-
-## Original Code 
+## <a name="pseudocode"></a>Pseudo Code
+### <a name="Original"></a>Original Code 
  - **Ticker** </br>
       In the original code we have stored the tickers in an array. We have hardcoded the values of the 12 tickers for which we need to run the stock analysis. The declaration of this array is shown below:
       ```
@@ -68,7 +74,7 @@ Since the data is huge, we would want our macro to run efficiently. For this pur
        Cells(4 + i, 2).Value = totalVolume
        Cells(4 + i, 3).Value = endingPrice / startingPrice - 1
   ```
- ## Refactored Code
+ ### <a name="refactored"></a>Refactored Code
  In the refactored code we have declared 3 arrays to store the values of "total volume", "Starting Price","Ending Price" of all the tickers.
  ```
  'Create three output arrays  
@@ -109,43 +115,63 @@ Next i
             tickerIndex = tickerIndex + 1
         End If
         
- ## <a name="Analysis"></a>Analysis
+## <a name="results"></a>Results
+
 ### <a name="allAnalysis"></a>All stock Analysis for 2017 and 2018
+
+### <a name="TVYR"></a>Total Volume and Yearly Return
+
 The table below displays the analysis of a dozen green stocks for the years 2017 and 2018. The table mainly consists of 3 columns:
 1. Ticker
 2. Total Daily Volume
 3. Return
 <p align = "center">
-<img src = "Module2_VBA\Images\2017_data.png" width = 25%>
-<img src = "Module2_VBA\Images\2018_data.png" width = 25%>
+<img src = "Module2_VBA\Images\2017_data.png" width = 30%>
+<img src = "Module2_VBA\Images\2018_data.png" width = 30%>
 </p>        
      
-#### **Total Volume and Yearly Return:**
-Total Volume is an indicator of the popularity of the stock. With the help of the bar graphs below we see that the DQ stock was traded 3 times higher in 2018 in comaprison to the previous year 2017.  Hence even though DQ was much popular in 2018, yet it resulted in a loss, with an annual return of -63%. 
-Comparing the total volume of the dozen stocks in both the years, we see that all the stocks had a higher traded volume in 2018. But the annual return for almost all the stocks has resulted in a loss in 2018, except for 2 stocks "ENPH","RUN" which has resulted in a gain. Also, "SPWR" has the highest total volume for both the years 2017 and 2018.
+**Total Volume** is an indicator of the popularity of the stock. From the above images we see that the **DQ stock** was traded **3 times higher in 2018 in comaprison to the previous year 2017.**  Hence even though **DQ** was much popular in 2018, yet it **resulted in a loss, with an annual return of ***-63%***.** <br> 
+Comparing the **total volume** of the dozen stocks in both the years, we see that majority of the stocks had a higher traded volume in **2018**. But the annual return for almost all the stocks has resulted in a loss in 2018, except for 2 stocks **"ENPH","RUN"** which has resulted in a gain. <br> Also, **"SPWR"** has the highest total volume for both the years **2017 and 2018**.
 
-Since the majority of the stocks have a negative yearly return, this might also be because the stock market may have gone down during the year 2018. Even though by looking at the data in the year 2018, DQ doesnt seem to be a good stock to invest in, there might be other reasons for its decline. Hence we need to analyze more data of the previous years for this stock to see its yearly trends.
+Since the majority of the stocks have a negative yearly return, this might also be because the stock market may have gone down during the year 2018. <br> **Even though by looking at the data in the year 2018, DQ doesn't seem to be a good stock to invest in, there might be other reasons for its decline. Hence we need to analyze more data of the previous years for this stock to see its yearly trends.**
 
+
+### <a name="time"></a>**Execution time:**
+
+The execution times of the ***Original*** code for the years **2017 and 2018** is as below: 
 <p align = "center">
-<img src = "Module2_VBA\Images\2017_volbar.png" width = 25%>
-<img src = "Module2_VBA\Images\2018_volbar.png" width = 25%>
+<img src = "Module2_VBA\Images\2017_runtime.png" width = 30%>
+<img src = "Module2_VBA\Images\2018_runtime.png" width = 30%>
 </p>
 
-#### **Execution time of Original Codes:**
-The execution times of the original code for the years 2017 and 2018 is as below: 
+The execution times of the ***Refactored*** code for the years **2017 and 2018** is as below: 
 <p align = "center">
-!<img src = "Module2_VBA\Images\2017_runtime.png" width = 50%>
-!<img src = "Module2_VBA\Images\2018_runtime.png" width = 50%>
+<img src = "Module2_VBA\Images\2017_refactor.png" width = 30%>
+<img src = "Module2_VBA\Images\2018_refactor.png" width = 30%>
 </p>
 
-## <a name="results"></a>Results
-Using images and examples of your code, compare the stock performance between 2017 and 2018, as well as the execution times of the original script and the refactored script.
+**From the above images we conclude that the ***refactored code*** executed much faster.** 
 
 ## <a name="summary"></a>Summary
-In a summary statement, address the following questions.
-What are the advantages or disadvantages of refactoring code?
-How do these pros and cons apply to refactoring the original VBA script?
+### <a name="advantages"></a>Advantages or Disadvantages of Refactoring code
+
+Improving the design of the existing code has many advantages:
+1. **Efficiency:** Refactoring increases the efficiency of the code. Our code executes much faster.
+2. **Readability:** A refactored code increases the readability and the understanding of the complex code. 
+3. **Helps finding Bugs**: Since a refactored complex code is more readable and easir to understand, it helps the coders to find and fix bugs quickly. 
+4. **Saves Time:** Code refactoring reduces the likelihood of errors and helps the future coders to implement new functionality easily.
+5. **Reduced Cost:** A clean and well-structured code takes less to update and maintain.  
+
+The major **disadvantage of refactoring** is:
+1. **Time consuming:** Refactoring can be a time consuming process, especially when the coder does not understand the functionality of the code.
+2. **Risky:** If the application is big,refactoring might be risky,as it should not hamper the existing functionality of the code. 
+3. **Introduce more bugs:** If the coder does not have enoough time to understand the functionality of the code, refactoring might introduce more bugs which can make the system unstable. 
+
+## <a name="pros"></a>How do these Pros and Cons apply to refactoring the original VBA script?
+1. Refactoring our original VBA script, helped our code execution to be much faster than before.
+2. By introducing arrays to store the 'total volume','starting price' and 'ending price' we have increased the readability of our code. Also we have removed the redundant code from our original script. In future if we have more stocks to analyze, we can just increase the array size and run our code without any modifications.
+3. The **major challenge** faced by me in refactoring the code was that it was **time consuming**. Being new to VBA I had to spend more time understanding the syntaxes and various functionalities and how to implement them in my code.
 
 ## <a name="references"></a>References
-[1] [Original Code](green_stocks.xlsm)
+[1] [Original Code](green_stocks.xlsm) <br>
 [2] [Refactored Code](VBA_Challenge.xlsm)
